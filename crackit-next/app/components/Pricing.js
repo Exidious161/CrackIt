@@ -7,6 +7,7 @@ import RippleButton from "./RippleButton";
 const TIERS = [
   {
     id: "service-edition",
+    url: "https://kptet5-xf.myshopify.com/products/digital-product-1",
     featured: false,
     tier: "Service Companies Edition",
     title: "Placement Interview Questions: What's Actually Asked",
@@ -24,6 +25,7 @@ const TIERS = [
   },
   {
     id: "complete-edition",
+    url: "https://kptet5-xf.myshopify.com/products/digital-product",
     featured: true,
     tier: "Complete Edition",
     title: "The Complete Interview Question Bank — 23 Companies",
@@ -81,12 +83,6 @@ function PriceCard({ tier, delay }) {
     if (cardRef.current) cardRef.current.style.transform = "";
   }
 
-  function handleBuyClick(e) {
-    e.preventDefault();
-    document.getElementById("products")?.scrollIntoView({ behavior: "smooth" });
-    console.warn(`CrackIt: "${tier.id}" buy button has no Shopify checkout URL yet — wire it up before launch.`);
-  }
-
   return (
     <Reveal delay={delay} translate="translate-y-5" scale>
       <div
@@ -135,8 +131,7 @@ function PriceCard({ tier, delay }) {
         </ul>
         <RippleButton
           as="a"
-          href="#"
-          onClick={handleBuyClick}
+          href={tier.url}
           className="w-full bg-[var(--accent)] text-white hover:bg-[var(--accent-dark)] inline-flex items-center justify-center gap-2 rounded-full px-6 py-[13px] text-[0.94rem] font-bold transition-colors"
         >
           {tier.cta}

@@ -264,17 +264,3 @@ if (backToTop) {
   });
 }
 
-// --- Buy buttons: not yet wired to a live Shopify product ---
-// TODO (before launch): replace href="#" on [data-product] buttons with the
-// real Shopify product page / checkout URL once each digital product is
-// created and published in the store (see data-product="service-edition"
-// and data-product="complete-edition").
-document.querySelectorAll("[data-product]").forEach(btn => {
-  btn.addEventListener("click", (e) => {
-    if (btn.getAttribute("href") === "#") {
-      e.preventDefault();
-      document.getElementById("products").scrollIntoView({ behavior: "smooth" });
-      console.warn(`CrackIt: "${btn.dataset.product}" buy button has no Shopify checkout URL yet — wire it up in index.html before launch.`);
-    }
-  });
-});
