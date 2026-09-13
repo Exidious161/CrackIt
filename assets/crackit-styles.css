@@ -22,14 +22,14 @@
   --maxw: 1180px;
   --font-head: "Baloo 2", "Sora", sans-serif;
   --font-body: "Inter", "Segoe UI", sans-serif;
-}.crackit-page * {box-sizing:border-box; margin:0; padding:0;}.crackit-page html {scroll-behavior:smooth;}.crackit-page body {
+}.crackit-page * {box-sizing:border-box; margin:0; padding:0;}html {scroll-behavior:smooth;}.crackit-page {
   background:var(--bg);
   color:var(--ink);
   font-family:var(--font-body);
   line-height:1.6;
   overflow-x:hidden;
   -webkit-font-smoothing:antialiased;
-}.crackit-page img, .crackit-page svg {display:block; max-width:100%;}.crackit-page a {color:inherit; text-decoration:none;}.crackit-page ul {list-style:none;}.crackit-page h1, .crackit-page h2, .crackit-page h3, .crackit-page h4 {font-family:var(--font-head); font-weight:700; line-height:1.12; letter-spacing:-0.01em;}.crackit-page .accent-text {color:var(--accent);}.crackit-page .container {max-width:var(--maxw); margin:0 auto; padding:0 24px;}.crackit-page #progressBar {
+}.crackit-page img, .crackit-page svg {display:block; max-width:100%;}.crackit-page a {color:inherit; text-decoration:none;}.crackit-page ul {list-style:none;}.crackit-page h1, .crackit-page h2, .crackit-page h3, .crackit-page h4, .crackit-page h5, .crackit-page h6 {font-family:var(--font-head); font-weight:700; line-height:1.12; letter-spacing:-0.01em; color:inherit;}.crackit-page .accent-text {color:var(--accent);}.crackit-page .container {max-width:var(--maxw); margin:0 auto; padding:0 24px;}.crackit-page #progressBar {
   position:fixed; top:0; left:0; height:4px; width:0%;
   background:linear-gradient(90deg,var(--accent),var(--yellow));
   z-index:1000; transition:width .1s linear; border-radius:0 4px 4px 0;
@@ -98,9 +98,14 @@
   width:100%; text-align:left; background:none; border:none; color:var(--ink); font-family:var(--font-body);
   font-size:1rem; font-weight:700; padding:22px 4px; cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:16px;
 }.crackit-page .faq-q .plus {color:var(--accent); font-size:1.3rem; transition:transform .3s ease; flex-shrink:0;}.crackit-page .faq-item.open .plus {transform:rotate(45deg);}.crackit-page .faq-a {max-height:0; overflow:hidden; transition:max-height .35s ease;}.crackit-page .faq-a p {color:var(--ink-dim); font-size:.94rem; padding:0 4px 22px;}.crackit-page .final-cta {
-  text-align:center; padding:90px 24px; margin:0 24px; border-radius:32px;
+  text-align:center; padding:100px 24px; margin:0 24px; border-radius:32px;
   background:var(--dark); color:#fff; position:relative; overflow:hidden;
-}.crackit-page .final-cta::before {content:""; position:absolute; width:320px; height:320px; background:var(--accent); opacity:.22; border-radius:50%; bottom:-160px; left:-100px;}.crackit-page .final-cta h2 {font-size:clamp(1.7rem,3.4vw,2.4rem); margin-bottom:28px; max-width:600px; margin-left:auto; margin-right:auto; position:relative; z-index:1;}.crackit-page .final-cta > .btn {position:relative; z-index:1;}.crackit-page .back-to-top {
+}.crackit-page .final-cta::before {content:""; position:absolute; width:320px; height:320px; background:var(--accent); opacity:.22; border-radius:50%; bottom:-160px; left:-100px;}.crackit-page .final-cta::after {content:""; position:absolute; width:220px; height:220px; background:var(--yellow); opacity:.14; border-radius:50%; top:-110px; right:-60px;}.crackit-page .final-cta h2 {font-size:clamp(2.1rem,4.8vw,3.4rem); font-weight:800; margin-bottom:34px; max-width:680px; margin-left:auto; margin-right:auto; position:relative; z-index:1; text-shadow:0 4px 30px rgba(255,106,26,.45);}.crackit-page .final-cta > .btn {position:relative; z-index:1; padding:20px 42px; font-size:1.12rem; animation:ctaPulse 2.4s ease-in-out infinite;}.crackit-page .final-cta > .btn:hover {animation-play-state:paused;}
+@keyframes ctaPulse {
+  0%,100% {box-shadow:0 14px 30px -12px rgba(255,106,26,.55), 0 0 0 0 rgba(255,106,26,.45);}
+  50% {box-shadow:0 14px 30px -12px rgba(255,106,26,.55), 0 0 0 16px rgba(255,106,26,0);}
+}
+.crackit-page .back-to-top {
   position:fixed; right:22px; bottom:22px; width:48px; height:48px; border-radius:50%;
   background:var(--dark); color:#fff; border:none; font-size:1.2rem; cursor:pointer;
   display:flex; align-items:center; justify-content:center; box-shadow:var(--shadow-sm);
@@ -116,5 +121,5 @@
 @media (max-width:520px){.crackit-page .hero-stats {gap:20px;}.crackit-page .trust-grid {grid-template-columns:1fr;}.crackit-page .chip-1, .crackit-page .chip-2 {display:none;}
 }
 
-@media (prefers-reduced-motion:reduce){.crackit-page html {scroll-behavior:auto;}.crackit-page .blob, .crackit-page .float-chip, .crackit-page .logos-scroll {animation:none !important;}.crackit-page .reveal, .crackit-page .reveal-child {transition:none !important; opacity:1 !important; transform:none !important;}.crackit-page .mascot-wrap, .crackit-page .price-card, .crackit-page .nav, .crackit-page .back-to-top {transition:none !important;}
+@media (prefers-reduced-motion:reduce){html {scroll-behavior:auto;}.crackit-page .blob, .crackit-page .float-chip, .crackit-page .logos-scroll, .crackit-page .final-cta > .btn {animation:none !important;}.crackit-page .reveal, .crackit-page .reveal-child {transition:none !important; opacity:1 !important; transform:none !important;}.crackit-page .mascot-wrap, .crackit-page .price-card, .crackit-page .nav, .crackit-page .back-to-top {transition:none !important;}
 }
