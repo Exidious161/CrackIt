@@ -1,0 +1,11 @@
+{
+  "sections": {
+    "crackit_landing": {
+      "type": "crackit-landing",
+      "settings": {}
+    }
+  },
+  "order": [
+    "crackit_landing"
+  ]
+}
