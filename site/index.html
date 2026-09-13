@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CrackIt — Real Interview Questions, Not Guesswork</title>
+<meta name="description" content="HR and technical interview questions compiled from real campus drives at up to 23 companies, plus worked model answers. Instant PDF download.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="progressBar"></div>
+
+<div class="nav-wrap">
+  <header class="nav" id="nav">
+    <a href="#top" class="logo">Crack<span>It</span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#how">How It Works</a>
+      <a href="#whats-inside">What's Inside</a>
+      <a href="#products">Pricing</a>
+      <a href="#roadmap">Roadmap</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a href="#products" class="btn btn-primary nav-cta">Get the Bank</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
+  </header>
+</div>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="blob blob-blue"></div>
+    <div class="blob blob-yellow"></div>
+    <div class="cursor-glow" aria-hidden="true"></div>
+    <div class="hero-grid">
+      <div class="hero-content">
+        <span class="eyebrow">✨ Placement Season Prep · Updated for 2026 drives</span>
+        <h1>Stop guessing what<br>they'll <span class="accent-text">actually ask</span>.</h1>
+        <p class="hero-sub">Real HR and technical questions compiled from recent campus drives at up to 23 companies — plus worked model answers. Not a leaked paper. Not a generic template. Just the patterns that actually repeat.</p>
+        <div class="hero-actions">
+          <a href="#products" class="btn btn-primary btn-lg">See the Guides — from ₹199</a>
+          <a href="#how" class="btn btn-ghost btn-lg">How It Works ↓</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><span class="stat-num" data-count="23">0</span><span class="stat-label">Companies</span></div>
+          <div class="stat"><span class="stat-num" data-count="440">0</span><span class="stat-label">Questions</span></div>
+          <div class="stat"><span class="stat-num" data-count="20">0</span><span class="stat-label">Worked Answers</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="mascot-wrap">
+          <div class="float-chip chip-1">🎯 300+ real Qs</div>
+          <div class="float-chip chip-2">✅ Selected</div>
+          <svg viewBox="0 0 420 420" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="210" cy="220" r="190" fill="var(--dark)"/>
+            <circle cx="330" cy="90" r="10" fill="var(--yellow)"/>
+            <circle cx="70" cy="330" r="7" fill="var(--blue)"/>
+            <circle cx="60" cy="110" r="5" fill="var(--accent)"/>
+            <path d="M300 340 q10 -14 24 -10" stroke="var(--yellow)" stroke-width="5" stroke-linecap="round" fill="none"/>
+            <ellipse cx="210" cy="392" rx="118" ry="16" fill="rgba(0,0,0,.28)"/>
+            <!-- laptop -->
+            <rect x="122" y="272" width="176" height="112" rx="14" fill="#fff"/>
+            <rect x="140" y="290" width="140" height="76" rx="6" fill="var(--blue-soft)"/>
+            <path d="M188 328 l16 16 32 -34" stroke="var(--accent)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <!-- body -->
+            <rect x="132" y="176" width="156" height="140" rx="60" fill="var(--accent)"/>
+            <!-- arm raised (thumbs up) -->
+            <rect x="270" y="140" width="26" height="90" rx="13" fill="var(--accent)" transform="rotate(18 283 185)"/>
+            <circle cx="308" cy="140" r="20" fill="#F7C89B"/>
+            <rect x="298" y="118" width="14" height="30" rx="7" fill="#F7C89B"/>
+            <!-- arm resting -->
+            <rect x="150" y="230" width="24" height="70" rx="12" fill="var(--accent-dark)" transform="rotate(-8 162 260)"/>
+            <!-- head -->
+            <circle cx="210" cy="150" r="62" fill="#F7C89B"/>
+            <path d="M150 140 q60 -46 120 0" stroke="#2b2b2b" stroke-width="10" fill="none" stroke-linecap="round"/>
+            <circle cx="184" cy="150" r="11" fill="none" stroke="#2b2b2b" stroke-width="5"/>
+            <circle cx="236" cy="150" r="11" fill="none" stroke="#2b2b2b" stroke-width="5"/>
+            <line x1="195" y1="150" x2="225" y2="150" stroke="#2b2b2b" stroke-width="4"/>
+            <path d="M192 176 q18 16 36 0" stroke="#2b2b2b" stroke-width="6" fill="none" stroke-linecap="round"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOGOS MARQUEE -->
+  <section class="logos reveal">
+    <p class="logos-label">Questions compiled from patterns reported at drives for</p>
+    <div class="logos-track">
+      <div class="logos-scroll" id="logosScroll">
+        <!-- duplicated in JS-free CSS by repeating markup twice for seamless loop -->
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="section" id="how">
+    <div class="section-head reveal">
+      <span class="pill-tag">How It Works</span>
+      <h2>From opening the PDF to <span class="accent-text">acing the round</span></h2>
+      <p>Tap a step, or just let it play.</p>
+    </div>
+    <div class="how-stage reveal">
+      <div class="how-visual" id="howVisual">
+        <div class="how-panel active" data-step="0">
+          <span class="how-icon">🎯</span>
+          <h3>Pick your guide</h3>
+          <p>Service Edition for the 14 mass-recruiter drives, or the Complete Bank if you're also chasing product-based and dream companies.</p>
+        </div>
+        <div class="how-panel" data-step="1">
+          <span class="how-icon">💳</span>
+          <h3>Checkout securely</h3>
+          <p>Pay through Shopify's own checkout — card, UPI, or netbanking. CrackIt never sees your payment details.</p>
+        </div>
+        <div class="how-panel" data-step="2">
+          <span class="how-icon">⚡</span>
+          <h3>Download instantly</h3>
+          <p>Your PDF unlocks the moment payment clears — straight to your device, no email approval wait.</p>
+        </div>
+        <div class="how-panel" data-step="3">
+          <span class="how-icon">🎓</span>
+          <h3>Walk in prepared</h3>
+          <p>Start with the Model Answer Bank, then your target company's section — and practice explaining answers out loud, not reciting them.</p>
+        </div>
+      </div>
+      <div class="scrubber">
+        <button class="scrub-play" id="scrubPlay" aria-label="Pause">❚❚</button>
+        <div class="scrub-track" id="scrubTrack">
+          <div class="scrub-seg active" data-step="0"><div class="scrub-fill"></div></div>
+          <div class="scrub-seg" data-step="1"><div class="scrub-fill"></div></div>
+          <div class="scrub-seg" data-step="2"><div class="scrub-fill"></div></div>
+          <div class="scrub-seg" data-step="3"><div class="scrub-fill"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HONESTY -->
+  <section class="honesty section" id="honesty">
+    <div class="honesty-inner reveal">
+      <span class="section-tag">The CrackIt difference</span>
+      <h2>There's no such thing as a <span class="accent-text">"leaked paper."</span> We won't pretend otherwise.</h2>
+      <p>Every question here is compiled from candidate-reported interview experiences and public placement-prep sources across recent hiring cycles. That means recurring patterns you can actually prepare for — not a script for your exact drive, because that doesn't exist.</p>
+      <div class="honesty-grid">
+        <div class="honesty-card reveal-child">
+          <div class="icon">🎯</div>
+          <h4>Real patterns, not scripts</h4>
+          <p>Compiled from what candidates actually reported hearing in the room — grouped by what repeats across companies.</p>
+        </div>
+        <div class="honesty-card reveal-child">
+          <div class="icon">🧠</div>
+          <h4>Explain it, don't recite it</h4>
+          <p>Every model answer is a template plus a worked example — adapt it with your own details. Interviewers can tell rehearsed lines from real understanding.</p>
+        </div>
+        <div class="honesty-card reveal-child">
+          <div class="icon">📚</div>
+          <h4>Organized to actually study from</h4>
+          <p>A shared Model Answer Bank up front, then a company-by-company breakdown with "how to prepare" notes for each recruiter.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS / PRICING -->
+  <section class="section" id="products">
+    <div class="section-head reveal">
+      <span class="section-tag">Pricing</span>
+      <h2>Pick your prep level</h2>
+      <p>Two guides, same honesty. Choose based on how wide a net you're casting this placement season.</p>
+    </div>
+
+    <div class="pricing-grid reveal">
+      <div class="price-card reveal-child">
+        <div class="tier">Service Companies Edition</div>
+        <h3>Placement Interview Questions: What's Actually Asked</h3>
+        <p class="desc">The 14 companies most students face first — the safety-net drives.</p>
+        <div class="price-tag"><span class="amount">₹199</span></div>
+        <ul class="price-features">
+          <li><span class="tick">✓</span> 14 major IT service recruiters — TCS, Infosys, Wipro, Capgemini, Accenture, Cognizant &amp; more</li>
+          <li><span class="tick">✓</span> 300+ real HR and technical questions</li>
+          <li><span class="tick">✓</span> 12 fully worked model answers</li>
+          <li><span class="tick">✓</span> Company-by-company breakdown with "how to prepare" notes</li>
+          <li><span class="tick">✓</span> 18 pages · instant PDF download</li>
+        </ul>
+        <a href="#" class="btn btn-primary btn-block" data-product="service-edition">Get the Service Edition — ₹199</a>
+        <p class="price-meta">Best for campus drives at mass-recruiter IT services companies</p>
+      </div>
+
+      <div class="price-card featured reveal-child">
+        <span class="price-badge">Most Popular</span>
+        <div class="tier">Complete Edition</div>
+        <h3>The Complete Interview Question Bank — 23 Companies</h3>
+        <p class="desc">Everything in the Service Edition, plus the product-based and dream-company tier.</p>
+        <div class="price-tag"><span class="amount">₹399</span></div>
+        <ul class="price-features">
+          <li><span class="tick">✓</span> All 14 service companies + Deloitte, Zoho, Oracle, Amazon, EPAM, Virtusa, NTT Data &amp; more (23 total)</li>
+          <li><span class="tick">✓</span> 440+ questions, organized by topic — not dumped in one list</li>
+          <li><span class="tick">✓</span> 20 fully worked model answers (HR + technical concepts)</li>
+          <li><span class="tick">✓</span> 6-program coding solutions appendix</li>
+          <li><span class="tick">✓</span> 9 concept quick-reference sheets</li>
+          <li><span class="tick">✓</span> 31 pages · instant PDF download</li>
+        </ul>
+        <a href="#" class="btn btn-primary btn-block" data-product="complete-edition">Get the Complete Bank — ₹399</a>
+        <p class="price-meta">Best for students also targeting product-based &amp; dream companies</p>
+      </div>
+    </div>
+
+    <div class="compare-table-wrap reveal">
+      <table class="compare-table">
+        <thead>
+          <tr><th>What you get</th><th>Service Edition · ₹199</th><th>Complete Bank · ₹399</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Companies covered</td><td>14</td><td class="yes">23</td></tr>
+          <tr><td>Total questions</td><td>300+</td><td class="yes">440+</td></tr>
+          <tr><td>Fully worked model answers</td><td>12</td><td class="yes">20</td></tr>
+          <tr><td>Technical questions organized by topic</td><td class="dim">—</td><td class="yes">✓</td></tr>
+          <tr><td>Coding solutions appendix</td><td class="dim">—</td><td class="yes">✓ 6 programs</td></tr>
+          <tr><td>Concept quick-reference sheets</td><td class="dim">—</td><td class="yes">✓ 9 topics</td></tr>
+          <tr><td>Product-based / dream companies</td><td class="dim">—</td><td class="yes">Amazon, Oracle, Zoho, Deloitte, EPAM &amp; more</td></tr>
+          <tr><td>Pages</td><td>18</td><td class="yes">31</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- WHAT'S INSIDE -->
+  <section class="section" id="whats-inside">
+    <div class="section-head reveal">
+      <span class="section-tag">Preview</span>
+      <h2>What's actually inside</h2>
+      <p>No mystery boxes. Here's exactly what you're opening the moment you download.</p>
+    </div>
+    <div class="inside-wrap reveal">
+      <div class="tab-buttons">
+        <button class="tab-btn active" data-tab="answers">Model Answer Bank</button>
+        <button class="tab-btn" data-tab="company">Company Breakdown</button>
+        <button class="tab-btn" data-tab="coding">Coding Appendix</button>
+        <button class="tab-btn" data-tab="concepts">Concept Sheets</button>
+      </div>
+
+      <div class="tab-panel active" id="tab-answers">
+        <div class="tab-copy">
+          <h3>Section 1 · Model Answer Bank</h3>
+          <p>The questions that repeat at almost every company in the guide — each with a template for structuring your answer, plus a worked example you adapt with your own details.</p>
+          <ul>
+            <li>"Tell me about yourself" — a 60-second structure</li>
+            <li>"Strengths and weaknesses" — without the clichés</li>
+            <li>"Why should we hire you?" / "Why this company?"</li>
+            <li>Behavioral (STAR) questions on teamwork and conflict</li>
+            <li>Technical concepts likely to get a follow-up (Complete Bank)</li>
+          </ul>
+        </div>
+        <div class="mock-page">
+          <div class="mock-tag">Section 1 · Sample</div>
+          <h5>"Tell me about yourself."</h5>
+          <p class="mock-q">Template: present (course, year, college) → one relevant strength or project → why you're here / what you're looking for. Keep it under 60 seconds.</p>
+          <div class="mock-a">"I'm a final-year Computer Science student at [college], and I've spent the last year focused on backend development — my strongest project was a [brief description] where I handled [specific part]…"</div>
+        </div>
+      </div>
+
+      <div class="tab-panel" id="tab-company">
+        <div class="tab-copy">
+          <h3>Section 2 · Company-by-Company</h3>
+          <p>Every recruiter gets its own section: a "how to prepare" note on what that company's rounds actually emphasize, then its HR and technical questions.</p>
+          <ul>
+            <li>HR round questions specific to that recruiter's style</li>
+            <li>Technical questions grouped by subject (OOP, DBMS, OS, C/C++…)</li>
+            <li>What that company's interviewers tend to weight most</li>
+          </ul>
+        </div>
+        <div class="mock-page">
+          <div class="mock-tag">Part A · Company 1 of 23</div>
+          <h5>TCS — NQT-track roles (Ninja / Digital / Prime)</h5>
+          <p class="mock-q" style="font-style:normal; color:var(--text-dim); font-size:.82rem;">TCS interviewers often open with a casual, off-script line to see how you handle being thrown off — answer briefly and naturally, then move to your prepared material.</p>
+          <ul class="mock-list">
+            <li>· What's your USP? Are you okay with relocation?</li>
+            <li>· Java vs. C# vs. C — key differences</li>
+            <li>· Write a SQL query using LIKE vs. =</li>
+            <li>· Explain any project on your resume, end-to-end</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tab-panel" id="tab-coding">
+        <div class="tab-copy">
+          <h3>Section 3 · Coding Solutions Appendix <em style="color:var(--text-faint); font-style:normal; font-size:.8rem;">(Complete Bank only)</em></h3>
+          <p>The recurring "write a program to…" questions, worked end-to-end — not just described, actually solved.</p>
+          <ul>
+            <li>6 fully worked programs covering the patterns that show up across service-company technical rounds</li>
+            <li>Clean, commented code you can walk an interviewer through line by line</li>
+            <li>Picked for frequency, not novelty — the ones that actually get asked</li>
+          </ul>
+        </div>
+        <div class="mock-page">
+          <div class="mock-tag">Section 3 · Sample entry</div>
+          <h5>"Write a C program for the Fibonacci series."</h5>
+          <div class="mock-a">Iterative solution walkthrough, expected output, and the follow-up interviewers usually ask next — how you'd adapt it to a recursive version.</div>
+        </div>
+      </div>
+
+      <div class="tab-panel" id="tab-concepts">
+        <div class="tab-copy">
+          <h3>Section 4 · Concept Quick-Reference Sheets <em style="color:var(--text-faint); font-style:normal; font-size:.8rem;">(Complete Bank only)</em></h3>
+          <p>9 topics condensed to a page each, so you can close a knowledge gap instead of just seeing that it exists.</p>
+          <ul>
+            <li>OOP fundamentals, DBMS &amp; normalization, OS scheduling</li>
+            <li>Testing types, SDLC models, data structure basics</li>
+            <li>C/C++ memory model, networking &amp; cloud fundamentals</li>
+          </ul>
+        </div>
+        <div class="mock-page">
+          <div class="mock-tag">Section 4 · Sample sheet</div>
+          <h5>OOP — the four pillars</h5>
+          <div class="mock-a">Encapsulation, abstraction, inheritance, polymorphism — one paragraph each, worded the way you'd actually say it out loud in an interview.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROADMAP -->
+  <section class="section" id="roadmap">
+    <div class="section-head reveal">
+      <span class="section-tag">Roadmap</span>
+      <h2>Where CrackIt is headed</h2>
+      <p>This isn't a one-and-done PDF drop. Here's what's live and what's next.</p>
+    </div>
+    <div class="timeline reveal">
+      <div class="timeline-item done reveal-child">
+        <span class="timeline-tag">Live now</span>
+        <h4>Service Companies Edition &amp; Complete 23-Company Bank</h4>
+        <p>Both guides are live with worked model answers, company-by-company breakdowns, and (in the Complete Bank) a coding appendix and concept sheets.</p>
+      </div>
+      <div class="timeline-item reveal-child">
+        <span class="timeline-tag">Next up</span>
+        <h4>Product-based &amp; dream-company deep dive</h4>
+        <p>A focused pack for the harder-to-crack rounds — Google, Microsoft, Adobe, Flipkart-style product companies — going beyond what the Complete Bank covers today.</p>
+      </div>
+      <div class="timeline-item reveal-child">
+        <span class="timeline-tag">Coming soon</span>
+        <h4>Mock-interview drills</h4>
+        <p>Short, scenario-based practice prompts so you can rehearse answers out loud, not just read them.</p>
+      </div>
+      <div class="timeline-item reveal-child">
+        <span class="timeline-tag">On the horizon</span>
+        <h4>Rolling updates as hiring cycles refresh</h4>
+        <p>Company sections get refreshed as new candidate-reported patterns come in each placement season, so the guides don't go stale.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST -->
+  <section class="section" id="trust">
+    <div class="section-head reveal">
+      <span class="section-tag">Trust</span>
+      <h2>Why job-seekers choose CrackIt</h2>
+      <p>No hype, no fake urgency — just what you're actually getting and how it's delivered.</p>
+    </div>
+    <div class="trust-grid reveal">
+      <div class="trust-card reveal-child">
+        <div class="icon">🔒</div>
+        <h4>Secure Shopify checkout</h4>
+        <p>Payments are processed through Shopify's own secure checkout — CrackIt never sees your card details.</p>
+      </div>
+      <div class="trust-card reveal-child">
+        <div class="icon">⚡</div>
+        <h4>Instant delivery</h4>
+        <p>Your PDF unlocks immediately after payment — no waiting on email approvals.</p>
+      </div>
+      <div class="trust-card reveal-child">
+        <div class="icon">✍️</div>
+        <h4>Honestly sourced</h4>
+        <p>Built from candidate-reported experiences and public prep sources — never sold as a "leaked paper."</p>
+      </div>
+      <div class="trust-card reveal-child">
+        <div class="icon">🎓</div>
+        <h4>For personal prep use</h4>
+        <p>Licensed for your own interview preparation — not for resale or redistribution.</p>
+      </div>
+    </div>
+
+    <div class="reviews-slot reveal">
+      <h3>Reviews</h3>
+      <p class="reviews-note">CrackIt just launched, so there aren't reviews yet — we'd rather show you that honestly than fake it. Buy a guide and be one of the first to leave one.</p>
+      <div class="review-skeletons">
+        <div class="review-skel"><div class="stars">☆☆☆☆☆</div><div class="skel-line"></div><div class="skel-line"></div><div class="skel-line short"></div></div>
+        <div class="review-skel"><div class="stars">☆☆☆☆☆</div><div class="skel-line"></div><div class="skel-line"></div><div class="skel-line short"></div></div>
+        <div class="review-skel"><div class="stars">☆☆☆☆☆</div><div class="skel-line"></div><div class="skel-line"></div><div class="skel-line short"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="section-head reveal">
+      <span class="section-tag">FAQ</span>
+      <h2>Questions, answered honestly</h2>
+    </div>
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <button class="faq-q">Is this a leaked question paper?<span class="plus">+</span></button>
+        <div class="faq-a"><p>No — no such thing exists for a specific drive, and any guide claiming otherwise is overselling. This is a compilation of recurring patterns from candidate-reported experiences and public placement-prep sources, meant to help you prepare and explain concepts clearly, not memorize a script.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What format do I get, and how fast?<span class="plus">+</span></button>
+        <div class="faq-a"><p>A PDF, delivered instantly after checkout through Shopify's digital delivery — no waiting.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What's the actual difference between the two guides?<span class="plus">+</span></button>
+        <div class="faq-a"><p>The ₹199 Service Edition covers the 14 mass-recruiter IT services companies most students interview with first. The ₹399 Complete Bank covers all 23 — adding product-based and dream companies like Amazon, Oracle, Zoho, Deloitte, and EPAM — plus a coding-solutions appendix and 9 concept reference sheets the Service Edition doesn't include.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Will this help for non-IT or core-branch interviews?<span class="plus">+</span></button>
+        <div class="faq-a"><p>The behavioral/HR framework (Model Answer Bank) transfers to almost any interview. The technical content is focused on IT/software recruitment, so it's the strongest fit if you're interviewing for a software or IT-services role.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What's your refund policy?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Because this is an instantly-delivered digital file, we can't offer refunds once it's downloaded. If something's wrong with your order or the file won't open, contact us and we'll sort it out.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Can I share this with friends or resell it?<span class="plus">+</span></button>
+        <div class="faq-a"><p>It's licensed for your own personal interview preparation. Please don't redistribute or resell it — point your friends to CrackIt instead.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final-cta reveal">
+    <h2>Your next interview shouldn't start from zero.</h2>
+    <a href="#products" class="btn btn-primary btn-lg">Get Your Guide</a>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">Crack<span style="color:var(--accent);">It</span></div>
+    <p class="footer-disclaimer">CrackIt is an independent publisher and is not affiliated with, endorsed by, or sponsored by TCS, Infosys, Wipro, Capgemini, Accenture, Cognizant, HCL Technologies, Tech Mahindra, IBM, LTIMindtree, Deloitte, Genpact, Zoho, Oracle, Mphasis, Hexaware, Persistent Systems, Amazon, Publicis Sapient, EPAM Systems, Virtusa, NTT Data, Zensar Technologies, or any other company named in these guides. Company names are used descriptively to indicate the recruiters these interview patterns were compiled from. All trademarks belong to their respective owners.</p>
+    <div class="footer-links">
+      <a href="mailto:chaudharyavnish161@gmail.com">Contact</a>
+      <a href="#faq">Refund Policy</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <p class="footer-copy">© 2026 CrackIt. All rights reserved.</p>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+<script src="script.js"></script>
+</body>
+</html>
