@@ -43,7 +43,7 @@
   display:inline-flex; align-items:center; justify-content:center; gap:8px;
   padding:13px 24px; border-radius:999px; font-weight:700; font-size:.94rem; font-family:var(--font-body);
   cursor:pointer; border:2px solid transparent; transition:transform .2s ease, box-shadow .2s ease, background .2s ease, border-color .2s ease, color .2s ease;
-  white-space:nowrap;
+  text-align:center; max-width:100%;
 }.crackit-page .btn:active {transform:translateY(1px) scale(.98);}.crackit-page .btn .ripple {
   position:absolute; border-radius:50%; background:rgba(255,255,255,.5); transform:scale(0);
   animation:rippleAnim .6s ease-out forwards; pointer-events:none;
@@ -123,6 +123,19 @@
     border-radius:20px; transform:translateY(-140%); opacity:0; transition:transform .3s ease, opacity .3s ease; z-index:800;}.crackit-page .nav-links.open {transform:translateY(0); opacity:1;}.crackit-page .nav-links a {padding:13px 0; border-bottom:1px solid #2c2d36; color:#fff;}.crackit-page .nav-links a:last-child {border-bottom:none;}.crackit-page .nav-cta {display:none;}.crackit-page .nav-toggle {display:block;}.crackit-page .hero-grid {grid-template-columns:1fr; text-align:center;}.crackit-page .hero-sub {margin-left:auto; margin-right:auto;}.crackit-page .hero-actions {justify-content:center;}.crackit-page .hero-stats {justify-content:center;}.crackit-page .hero-visual {margin-top:20px;}.crackit-page .mascot-wrap {max-width:300px;}.crackit-page .honesty-grid {grid-template-columns:1fr;}.crackit-page .pricing-grid {grid-template-columns:1fr;}.crackit-page .tab-panel {grid-template-columns:1fr;}.crackit-page .tab-panel .mock-page {order:-1;}.crackit-page .trust-grid {grid-template-columns:repeat(2,1fr);}.crackit-page .review-skeletons {grid-template-columns:1fr;}.crackit-page .section {padding:76px 0;}.crackit-page .how-visual {padding:36px 22px;}
 }
 @media (max-width:520px){.crackit-page .hero-stats {gap:20px;}.crackit-page .trust-grid {grid-template-columns:1fr;}.crackit-page .chip-1, .crackit-page .chip-2 {display:none;}
+}
+@media (max-width:400px){
+  .crackit-page .container {padding:0 16px;}
+  .crackit-page .hero {padding:130px 16px 32px;}
+  .crackit-page .section {padding:56px 0;}
+  .crackit-page .nav-wrap {padding:0 10px;}
+  .crackit-page .nav {padding:8px 8px 8px 16px; gap:10px;}
+  .crackit-page .final-cta {margin:0 12px; padding:64px 16px;}
+  .crackit-page .how-visual {padding:28px 16px;}
+  .crackit-page .price-card {padding:28px 20px;}
+  .crackit-page .honesty-card, .crackit-page .trust-card {padding:20px;}
+  .crackit-page .btn-lg {padding:14px 22px; font-size:.96rem;}
+  .crackit-page .price-tag .amount {font-size:2.2rem;}
 }
 
 @media (prefers-reduced-motion:reduce){html {scroll-behavior:auto;}.crackit-page .blob, .crackit-page .float-chip, .crackit-page .logos-scroll, .crackit-page .final-cta > .btn, .crackit-page .skel-line {animation:none !important;}.crackit-page .reveal, .crackit-page .reveal-child {transition:none !important; opacity:1 !important; transform:none !important;}.crackit-page .mascot-wrap, .crackit-page .price-card, .crackit-page .nav, .crackit-page .back-to-top, .crackit-page .review-skel, .crackit-page .review-skel .stars {transition:none !important;}
