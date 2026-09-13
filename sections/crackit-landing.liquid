@@ -373,12 +373,20 @@
 
     <div class="reviews-slot reveal">
       <h3>Reviews</h3>
-      <p class="reviews-note">CrackIt just launched, so there aren't reviews yet — we'd rather show you that honestly than fake it. Buy a guide and be one of the first to leave one.</p>
-      <div class="review-skeletons">
-        <div class="review-skel reveal-child"><div class="stars">☆☆☆☆☆</div><div class="skel-line"></div><div class="skel-line"></div><div class="skel-line short"></div></div>
-        <div class="review-skel reveal-child"><div class="stars">☆☆☆☆☆</div><div class="skel-line"></div><div class="skel-line"></div><div class="skel-line short"></div></div>
-        <div class="review-skel reveal-child"><div class="stars">☆☆☆☆☆</div><div class="skel-line"></div><div class="skel-line"></div><div class="skel-line short"></div></div>
-      </div>
+      {% if section.blocks.size > 0 %}
+        <div class="reviews-app-blocks">
+          {% for block in section.blocks %}
+            {% render block %}
+          {% endfor %}
+        </div>
+      {% else %}
+        <p class="reviews-note">CrackIt just launched, so there aren't reviews yet — we'd rather show you that honestly than fake it. Buy a guide and be one of the first to leave one.</p>
+        <div class="review-skeletons">
+          <div class="review-skel reveal-child"><div class="stars">☆☆☆☆☆</div><div class="skel-line"></div><div class="skel-line"></div><div class="skel-line short"></div></div>
+          <div class="review-skel reveal-child"><div class="stars">☆☆☆☆☆</div><div class="skel-line"></div><div class="skel-line"></div><div class="skel-line short"></div></div>
+          <div class="review-skel reveal-child"><div class="stars">☆☆☆☆☆</div><div class="skel-line"></div><div class="skel-line"></div><div class="skel-line short"></div></div>
+        </div>
+      {% endif %}
     </div>
   </section>
 
@@ -447,6 +455,11 @@
 {
   "name": "CrackIt Landing",
   "settings": [],
+  "blocks": [
+    {
+      "type": "@app"
+    }
+  ],
   "presets": [
     {
       "name": "CrackIt Landing"
