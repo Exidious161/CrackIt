@@ -22,7 +22,7 @@
   --maxw: 1180px;
   --font-head: "Baloo 2", "Sora", sans-serif;
   --font-body: "Inter", "Segoe UI", sans-serif;
-}.crackit-page * {box-sizing:border-box; margin:0; padding:0;}html {scroll-behavior:smooth;}.crackit-page {
+}.crackit-page * {box-sizing:border-box; margin:0; padding:0;}html {scroll-behavior:smooth; font-size:100%;}.crackit-page {
   background:var(--bg);
   color:var(--ink);
   font-family:var(--font-body);
