@@ -1,5 +1,23 @@
 // ===== CrackIt site interactions =====
 
+// --- Launch banner: click-to-copy discount code ---
+const launchCode = document.getElementById("launchCode");
+const copiedMsg = document.getElementById("copiedMsg");
+if (launchCode && copiedMsg) {
+  launchCode.addEventListener("click", () => {
+    const code = launchCode.dataset.code;
+    const showCopied = () => {
+      copiedMsg.classList.add("show");
+      setTimeout(() => copiedMsg.classList.remove("show"), 1800);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(code).then(showCopied).catch(showCopied);
+    } else {
+      showCopied();
+    }
+  });
+}
+
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const canHover = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
 
